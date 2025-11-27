@@ -1,0 +1,2 @@
+uart_comm.c:30:13:adc_update_500ms	8	static
+uart_comm.c:46:6:uart_communiation_fsm	8	static
