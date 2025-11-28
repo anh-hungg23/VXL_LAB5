@@ -12,10 +12,12 @@ static uint8_t parsing_index = 0;
 
 void command_parser_fsm(uint8_t c)
 {
+
     switch(parser_state)
     {
     case 0:
         if(c == '!') {
+
             parsing_index = 0;
             parsing_buffer[parsing_index++] = c;
             parser_state = 1;

@@ -34,8 +34,9 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
   HAL_UART_Receive_IT(&huart2, &temp_rx, 1);
-  //HAL_ADC_Start(&hadc1);                    // Chạy ADC chế độ continuous
-
+  HAL_ADC_Start(&hadc1);                    // Chạy ADC chế độ continuous
+  uint8_t wake = 0x00;
+  HAL_UART_Transmit(&huart2, &wake, 1, 10);
   /* USER CODE END 2 */
 
   while (1)
